@@ -1,0 +1,76 @@
+@import "../../../styles/0-base/base";
+.topBar {
+    // padding: 8px 0;
+    background-color: #272727;
+    color: #fff;
+    @extend .font-16;
+    line-height: 3rem;
+    .lang {
+        background-color: $base_red;
+        padding: 0 2.125rem
+    }
+}
+
+header {
+    padding: 1.5rem 0;
+    margin-bottom: 3rem;
+    background: #fff;
+}
+
+.searchForm {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    border: 1px solid $base_red;
+    border-radius: 15px;
+    padding-left: 3rem;
+    padding-right: 5px;
+    margin: 0 2rem;
+    background: #fff;
+    input div {
+        border: none;
+        @extend .font-12;
+        color: #171717;
+        line-height: 44px;
+        padding-right: 60px;
+        width: 100%;
+        &:focus {
+            outline: none;
+        }
+    }
+    button {
+        background-color: $base_red;
+        border-radius: 15px;
+        height: 38px;
+        width: 38px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            stroke: #fff;
+            width: 15px;
+            height: auto;
+        }
+    }
+    .ng-autocomplete {
+        width: 100%;
+    }
+    .image {
+        width: 100px;
+        height: 100px;
+    }
+    small {
+        color: #00a651;
+    }
+    .productCard {
+        color: #000;
+        font-weight: 600;
+        padding: 0 10px;
+        margin-bottom: 25px;
+    }
+    .price {
+        padding: 0 10px;
+        color: #00a651;
+    }
+}

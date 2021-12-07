@@ -1,0 +1,30 @@
+@import '../../../../../styles/0-base/base';
+.addAddressButton {
+    @include button(#fff, $base_red, $base_red, 15px, 4rem, $font_weight_bold);
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 1px;
+    padding: 0;
+    box-sizing: border-box;
+    svg {
+        stroke: $base_red;
+        width: 24px;
+        height: 26px;
+        margin-right: 12px;
+    }
+}
+
+// ul {
+//     gap: 1rem;
+//     align-items: center;
+//     >li,
+//     >app-address-item {
+//         width: 50%;
+//     }
+//     >li {
+//         height: 100%
+//     }
+// }

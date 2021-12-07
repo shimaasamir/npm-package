@@ -1,0 +1,55 @@
+@charset 'utf-8';
+
+/* Importing Bootstrap SCSS file. */
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~bootstrap/scss/bootstrap";
+
+/*======Base=====*/
+
+@import "0-base/base";
+
+/*======Components=====*/
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "1-components/components";
+// @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+// @import '~css-star-rating/scss/star-rating';
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.blue-snackbar {
+    background: #28a745 !important;
+}
+
+.red-snackbar {
+    background-color: #dc3545 !important;
+}
+
+
+/* These styles for auto complete component*/
+
+.autocomplete-container {
+    box-shadow: none !important;
+}
+
+.item {
+    padding: 10px !important;
+    img {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

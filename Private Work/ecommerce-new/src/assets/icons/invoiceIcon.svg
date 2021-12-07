@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+  <g id="Group_11954" data-name="Group 11954" transform="translate(0 -0.074)">
+    <rect id="Rectangle_2170" data-name="Rectangle 2170" width="23" height="23" transform="translate(0 0.074)" fill="none"/>
+    <g id="Group_8823" data-name="Group 8823" transform="translate(3.436 2.942)">
+      <path id="Path_5795" data-name="Path 5795" d="M1131.826,4737.987h-12.094a3.2,3.2,0,0,1-3.2-3.2v-12.35a.918.918,0,0,1,.915-.915h11.147a.918.918,0,0,1,.915.915v10.52" transform="translate(-1116.53 -4721.521)" fill="none" stroke="#2c3149" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_5796" data-name="Path 5796" d="M1144.9,4737.87" transform="translate(-1131.923 -4730.391)" fill="none" stroke="#2c3149" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_5797" data-name="Path 5797" d="M1144.9,4737.87v6.912a2.083,2.083,0,0,0,2.081,2.081h0a2.083,2.083,0,0,0,2.081-2.081v-6a.918.918,0,0,0-.915-.916h-.622" transform="translate(-1131.923 -4730.391)" fill="none" stroke="#2c3149" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+      <g id="Group_8009" data-name="Group 8009" transform="translate(2.996 4.693)">
+        <line id="Line_1914" data-name="Line 1914" x2="2.328" transform="translate(0)" fill="none" stroke="#2c3149" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+        <line id="Line_1915" data-name="Line 1915" x2="6.614" transform="translate(0 3.179)" fill="none" stroke="#2c3149" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+        <line id="Line_1916" data-name="Line 1916" x2="6.733" transform="translate(0 6.358)" fill="none" stroke="#2c3149" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

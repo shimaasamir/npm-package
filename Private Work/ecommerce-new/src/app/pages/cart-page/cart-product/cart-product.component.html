@@ -1,0 +1,93 @@
+<!-- <div class="cartProductCard w-100">
+    <div class="odiggoCard" [ngClass]="isEdit ? 'isEdit' : ''" [@editProd]=isEdit>
+        <img [src]="product.featuredImage" class="img-fluid">
+        <div class="productDetails">
+            <h3>
+                {{product.name}}
+            </h3>
+            <p class="rating">
+                450 <img src="../../../../assets/icons/star.svg" /><span>(9)</span>
+                available in stock {{ product.stock_quantity }}
+                <br>
+                <br> total {{ (product.quantity * product.sale_price) | number}} EGP
+            </p>
+        </div>
+        <div class="actions">
+            <div class="select-wrapper">
+                <select class="form-control" (change)="selectQuantity($event)">
+                    <option [selected]="(i+1) == product.quantity"
+                        *ngFor="let item of fakeArray(product.stock_quantity); let i = index">
+                        {{ i + 1 }}
+                    </option>
+                </select>
+            </div>
+            <p>
+                <span>
+                    EGP
+                </span> {{product.sale_price | number}}
+            </p>
+            <img (click)="editProduct()" src="../../../../assets/icons/{{isEdit ?'closeProdEdit' :'trash'}}.svg">
+        </div>
+    </div>
+    <button type="button" class="odiggoCard delete" (click)="removeProduct()">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <svg>
+                <use xlink:href="#trash"></use>
+            </svg> Delete
+        </div>
+    </button>
+    <div class="odiggoCard wishList">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <svg>
+                <use xlink:href="#wishList"></use>
+            </svg> Add to wishlist
+        </div>
+    </div>
+</div> -->
+<div class="cartProductCard w-100">
+    <div class="odiggoCard" [ngClass]="isEdit ? 'isEdit' : ''" [@editProd]=isEdit>
+        <img [src]="product.featuredImage" class="img-fluid">
+        <div class="productDetails">
+            <h3>
+                {{product.name}}
+            </h3>
+            <!-- <p class="rating">
+                450 <img src="../../../../assets/icons/star.svg" /><span>(9)</span> available in stock {{ product.stock_quantity }}
+                <br>
+                <br> total {{ (product.quantity * product.sale_price) | number}} EGP
+            </p> -->
+        </div>
+        <div class="actions">
+            <div class="select-wrapper">
+
+                <select class="form-control">
+          <option>1</option>
+          <option [selected]="(i+1) == product.quantity"
+            *ngFor="let item of fakeArray(product.stock_quantity); let i = index">
+            {{ i + 1 }}
+          </option>
+        </select>
+            </div>
+            <p class="price">
+                <span>
+          EGP
+        </span> {{ (product.quantity * product.sale_price) | number}}
+            </p>
+            <img (click)="editProduct()" src="../../../../assets/icons/{{isEdit ?'closeProdEdit' :'trash'}}.svg">
+        </div>
+    </div>
+    <button type="button" class="odiggoCard delete" (click)="removeProduct()">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <svg>
+        <use xlink:href="#trash"></use>
+      </svg> Delete
+    </div>
+  </button>
+    <!-- <div class="odiggoCard wishList">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <svg>
+        <use xlink:href="#wishList"></use>
+      </svg> Add to wishlist
+        </div>
+    </div> -->
+</div>

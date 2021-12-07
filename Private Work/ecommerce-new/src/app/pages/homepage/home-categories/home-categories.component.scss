@@ -1,0 +1,19 @@
+@import "../../../../styles/0-base/base";
+.categories {
+    border: 1px solid #EEEEEE;
+    background: #fff;
+    padding: 1rem;
+    li {
+        margin-bottom: 1rem;
+        &:first-child {
+            @extend .font-16;
+            color: #000;
+            border-bottom: 1px solid #EEEEEE;
+            padding-bottom: .5rem;
+            margin-bottom: .5rem;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

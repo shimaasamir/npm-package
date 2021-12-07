@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="font-28 mb-4">
+                Shopping Cart
+            </h1>
+        </div>
+        <div class="col-md-9">
+            <div class="cartDetails ">
+                <div class="cartItems">
+                    <app-cart-product *ngFor="let product of productList" [product]="product"></app-cart-product>
+                </div>
+                <div class="cartItems warning" *ngIf="productList.length == 0">
+                    Shopping cart is currently empty <br> Add items to your cart and view them here before you checkout.
+                    <a routerLink="/categories" href="#">Continue shopping! </a>
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="cartTotal odiggoCard mb-6">
+                <h2>
+                    Cart Total
+                </h2>
+                <ul>
+                    <li>
+                        Subtotal <span>{{subTotalPrice | number}} EGP</span>
+                    </li>
+                    <li>
+                        Shipping <span>0 EGP</span>
+                    </li>
+                    <li>
+                        Total <span> {{totalPrice | number}} EGP</span>
+                    </li>
+
+                </ul>
+                <button type="button" (click)="redirectToHome()" class="buttonSec w-100">
+          Continue Shopping
+        </button>
+                <button type="button" (click)="redirectToCheckout()" class="buttonPrimary w-100">
+          Proceed to checkout
+        </button>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="checkout w-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex justify-content-between">
+                    <div class="totalCart">
+                        <span>
+              Total Price
+            </span> {{totalPrice | number}} EGP
+                            Total Price
+                        </span> {{subTotalPrice | number}} EGP
+                    </div>
+                    <button type="button" (click)="redirectToCheckout()">Checkout
+            <img src="../../../assets/icons/checkoutIcon.svg">
+          </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

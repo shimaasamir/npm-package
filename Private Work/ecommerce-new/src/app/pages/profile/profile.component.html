@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="odiggoCard profileMenu">
+                <li>
+                    <a class="d-flex active" href="">
+                        <img class="mr-3" src="../../../assets/icons/profileIcon.svg"> Profile Information
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex" href="">
+                        <img class="mr-3" src="../../../assets/icons/complainsIcon.svg"> Complains
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex" href="">
+                        <img class="mr-3" src="../../../assets/icons/couponsIcon.svg"> My Coupons
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex" href="">
+                        <img class="mr-3" src="../../../assets/icons/OrdersIcon.svg"> My Orders
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex" href="">
+                        <img class="mr-3" src="../../../assets/icons/requestIcon.svg"> Product Request
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="col-md-9">
+            <router-outlet></router-outlet>
+
+        </div>
+    </div>
+
+</div>
+<app-footer></app-footer>

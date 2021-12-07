@@ -1,0 +1,33 @@
+@import "../../../../../styles/0-base/base";
+.cart {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    position: relative;
+    margin-right: 35px;
+    cursor: pointer;
+    svg {
+        stroke: #1f3150;
+        width: 15px;
+        height: 19px;
+        margin-right: 12px;
+    }
+    span {
+        @extend .font-12;
+        font-weight: $font_weight_medium;
+        color: #000;
+    }
+    .notification {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: $base_red;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 20px;
+        @extend .font-12;
+        color: $base_white;
+        top: 0;
+        left: 20px;
+    }
+}

@@ -1,0 +1,8 @@
+<ul class="categories odiggoCard">
+    <li>
+        Browes categories
+    </li>
+    <li *ngFor="let category of categoryList">
+        <app-category [category]="category"></app-category>
+    </li>
+</ul>

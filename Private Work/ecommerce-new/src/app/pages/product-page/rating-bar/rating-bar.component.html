@@ -1,0 +1,11 @@
+<div class="ratingProg w-100 mb-3">
+    <h6 class="rating mb-2 d-flex align-items-center ">
+        {{ ratName }} <img src="../../../../../../../assets/icons/star.svg">
+        <span class="ml-auto font-12">({{ totalReview }} Review)</span>
+    </h6>
+    <div class="progress w-100" style="height: 5px;">
+        <div [ngStyle]="{'width': percent}" class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+            aria-valuemax="50">
+        </div>
+    </div>
+</div>

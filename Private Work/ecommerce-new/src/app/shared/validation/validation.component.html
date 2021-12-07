@@ -1,0 +1,18 @@
+<small *ngIf="control?.touched && control?.invalid" style="color: red !important" id="emailHelp"
+    class="form-text text-muted {{className}}">
+    <span *ngIf="control?.errors?.required">
+        Please fill in this field.
+    </span>
+    <span *ngIf="control?.errors?.pattern">
+        invalid {{ fieldName }}
+    </span>
+    <span *ngIf="control?.errors?.minlength">
+        minimum characters for {{ fieldName }} ( {{ control?.errors?.minlength.requiredLength }} )
+    </span>
+    <span *ngIf="control?.errors?.maxlength">
+        maximum characters for {{ fieldName }} ( {{ control?.errors?.maxlength.requiredLength }} )
+    </span>
+    <span *ngIf="control?.errors?.mustMatch">
+        Password must match
+    </span>
+</small>

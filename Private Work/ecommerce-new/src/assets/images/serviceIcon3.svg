@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="141" height="143" viewBox="0 0 141 143">
+  <defs>
+    <filter id="Ellipse_11020" x="0" y="0" width="141" height="143" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-opacity="0.078"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 2048 2048">
+      <image width="2048" height="2048" xlink:href="serviceIcon3-image.png"/>
+    </pattern>
+  </defs>
+  <g id="Group_11438" data-name="Group 11438" transform="translate(-979 -1628)">
+    <g id="Group_11437" data-name="Group 11437">
+      <g id="Group_11436" data-name="Group 11436">
+        <g id="Group_11435" data-name="Group 11435">
+          <g id="Group_11434" data-name="Group 11434">
+            <g id="Group_11433" data-name="Group 11433">
+              <g id="Group_11432" data-name="Group 11432">
+                <g id="Group_11431" data-name="Group 11431">
+                  <g id="Group_11430" data-name="Group 11430">
+                    <g transform="matrix(1, 0, 0, 1, 979, 1628)" filter="url(#Ellipse_11020)">
+                      <ellipse id="Ellipse_11020-2" data-name="Ellipse 11020" cx="40.5" cy="41.5" rx="40.5" ry="41.5" transform="translate(30 27)" fill="#008a3e"/>
+                    </g>
+                    <rect id="Hook.H03.2k" width="68" height="69" transform="translate(1015 1661)" fill="url(#pattern)"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

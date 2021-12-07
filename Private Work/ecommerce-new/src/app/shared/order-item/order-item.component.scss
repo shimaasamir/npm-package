@@ -1,0 +1,39 @@
+@import '../../../styles/0-base/base';
+.status {
+    @extend .font-12;
+    font-weight: $font_weight_bold;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.idDate {
+    @extend .font-12;
+    font-weight: $font_weight_medium;
+}
+
+.orderDetails {
+    img {
+        height: 100px;
+        width: auto;
+    }
+    h2 {
+        @extend .font-14;
+        font-weight: $font_weight_bold;
+        color: #000;
+    }
+    .price {
+        @extend .font-14;
+        font-weight: $font_weight_bold;
+        span {
+            @extend .font-12;
+        }
+    }
+    button {
+        @include button($sec_green, #fff, $sec_green, 33px, 50px, $font_weight_bold);
+        line-height: 40px;
+        height: 50px;
+        align-self: flex-end;
+        width: 200px;
+    }
+}

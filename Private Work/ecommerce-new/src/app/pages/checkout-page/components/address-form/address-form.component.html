@@ -1,0 +1,81 @@
+<h2 class="heading-2 mb-3">
+    Add New Address
+</h2>
+<form>
+    <app-error-details *ngIf="error && error.errors" [errors]="error?.errors"></app-error-details>
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <app-form-group [dataSource]="sateList" [control]="getControl('state')" (changeValue)="onStateChange($event)" [inputType]="'dropdown'">
+            </app-form-group>
+            <app-validation [control]="getControl('state')" [className]="'mb-40'" [fieldName]="'state'"></app-validation>
+
+        </div>
+        <div class="col-md-6">
+            <app-form-group [dataSource]="cityList" [control]="getControl('city')" [inputType]="'dropdown'">
+            </app-form-group>
+            <app-validation [control]="getControl('city')" [className]="'mb-40'" [fieldName]="'city'"></app-validation>
+
+        </div>
+    </div>
+
+
+
+    <app-form-group [control]="getControl('line1')" [inputType]="'text'" [inputPlaceholder]="'Address '">
+    </app-form-group>
+    <app-validation [control]="getControl('line1')" [className]="'mb-40'" [fieldName]="'city'"></app-validation>
+    <!-- <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="customRadio3" name="payment">
+        <label class="custom-control-label d-flex align-items-center" for="customRadio3">
+      <div class="d-flex flex-column">
+        Create an account
+        <span>Create an account by entering the information below. If you are a returning customer please login at the
+          top of the page.</span>
+      </div>
+    </label>
+    </div> -->
+    <!-- <div class="row">
+        <div class="col-md-6">
+
+            <app-form-group [inputType]="'password'" [inputPlaceholder]="'Password'">
+            </app-form-group>
+            <app-validation [className]="'mt-40'" [fieldName]="'password'"></app-validation>
+
+        </div>
+        <div class="col-md-6">
+            <app-form-group [inputType]="'password'" [inputPlaceholder]="'Confirm Password'">
+            </app-form-group>
+            <app-validation [className]="'mb-40'" [fieldName]="'Confirm Password'"></app-validation>
+
+        </div>
+    </div> -->
+
+    <app-form-group [inputType]="'textarea'" [inputPlaceholder]="'Note '">
+    </app-form-group>
+
+    <!--
+
+    <app-form-group [fieldLabel]="'Address Line 2'" [control]="getControl('line2')" [inputType]="'text'" [inputPlaceholder]="'Address Line 2'">
+    </app-form-group> -->
+
+    <!-- <app-form-group [className]="'mb-40'" [control]="getControl('building')" [fieldLabel]="'building'" [inputType]="'text'" [inputPlaceholder]="'building'">
+    </app-form-group>
+
+    <app-form-group [className]="'mb-40'" [control]="getControl('apartment_no')" [fieldLabel]="'apartment_no'" [inputType]="'text'" [inputPlaceholder]="'apartment_no'">
+    </app-form-group>
+
+    <app-form-group [className]="'mb-40'" [control]="getControl('floor')" [fieldLabel]="'floor'" [inputType]="'text'" [inputPlaceholder]="'floor'">
+    </app-form-group> -->
+
+
+
+
+    <!-- <button type="button" (click)="back()" class="btn btn-secondary">Back</button> -->
+
+    <button type="button" class="green w-25" (click)="submit()">
+    <ovel-loader *ngIf="showLoader"></ovel-loader>
+    Save
+  </button>
+
+</form>

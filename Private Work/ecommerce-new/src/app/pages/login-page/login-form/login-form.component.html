@@ -1,0 +1,30 @@
+<form [formGroup]="form">
+    <h1 class="font-18">
+        Login to Odiggo
+    </h1>
+    <p class="font-12 mb-3">
+        Stay Logged in With Your Account to get a Better experience
+    </p>
+    <small style="color: red !important" id="emailHelp" class="form-text text-muted">
+    {{ error.message }}
+  </small>
+    <br>
+
+    <div class="form-group loginInput">
+        <label for="exampleInputEmail1">Email</label>
+        <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <app-validation [control]="email" [fieldName]="'mail'"></app-validation>
+    </div>
+    <div class="form-group loginInput">
+        <label for="exampleInputPassword1">Password</label>
+        <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <app-validation [control]="password" [fieldName]="'password'"></app-validation>
+
+    </div>
+    <button type="button" (click)="submit()">
+    <ovel-loader *ngIf="showLoader"></ovel-loader>
+    Login
+  </button>
+    <app-social-login [alterText]="'Do not have an account ?'" [navigationPath]="'/signup'" [buttonText]="'Sign Up'">
+    </app-social-login>
+</form>

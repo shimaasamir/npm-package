@@ -1,0 +1,28 @@
+@import '../../../../../styles/1-components/components';
+.custom-checkbox {
+    margin-bottom: 16px;
+}
+
+// .font-12 {
+//     margin-bottom: 20px;
+// }
+.btn.btn-secondary {
+    background-color: #191919 !important;
+    border-color: #191919 !important;
+}
+
+.btn.btn-secondary:hover {
+    background-color: #191919 !important;
+    border-color: #191919 !important;
+}
+
+.btn.btn-primary {
+    background-color: #40a435 !important;
+    border-color: #40a435 !important;
+    margin-left: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #40a435 !important;
+    border-color: #40a435 !important;
+}

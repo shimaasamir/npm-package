@@ -1,0 +1,46 @@
+<div class="odiggoCard d-flex ">
+
+    <img src="../../../../../assets/images/productImage.png" />
+    <div class="d-flex flex-column flex-grow-1">
+        <p>
+            Add your Car…personalize your experience
+        </p>
+        <form class="searchForm" [formGroup]="form">
+            <div class="field d-flex flex-column">
+
+                <select class="form-control" formControlName="brandId" (change)="changeBrand($event)">
+          <option [value]="null" [disabled]="true">
+            Select
+          </option>
+          <option [value]="brand.id" *ngFor="let brand of brandList">
+            {{ brand.name}}
+          </option>
+        </select>
+            </div>
+            <div class="field d-flex flex-column">
+
+                <select class="form-control" formControlName="modelId" (change)="changeModel($event)">
+          <option [value]="null" [disabled]="true">
+            Select
+          </option>
+          <option [value]=" model.id" *ngFor="let model of modelList">
+            {{ model.name}}
+          </option>
+        </select>
+            </div>
+            <div class="field d-flex flex-column">
+
+                <select class="form-control" formControlName="year">
+          <option [value]="null" [disabled]="true">
+            Select
+          </option>
+          <option [value]=" model.id" *ngFor="let model of yearsList">
+            {{ model.name}}
+          </option>
+        </select>
+            </div>
+            <button [disabled]="!form.valid" (click)="redirectTo()">GO</button>
+        </form>
+    </div>
+
+</div>

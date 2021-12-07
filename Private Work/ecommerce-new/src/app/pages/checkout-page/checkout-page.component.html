@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="font-28 mb-4">
+                Checkout
+            </h1>
+        </div>
+        <div class="col-md-6">
+            <ng-template [ngIf]="isLogin">
+                <app-address-form [StateDataSource]="stateList" *ngIf="!pauseState" (BackClick)="onBackClick($event)">
+                </app-address-form>
+                <app-address-list [StateDataSource]="stateList" [DataSource]="addressList$ | async" (newAddress)="onPausedClick()" *ngIf="pauseState">
+                </app-address-list>
+            </ng-template>
+
+            <ng-template [ngIf]="!isLogin">
+                <app-checkout-form [StateDataSource]="stateList"></app-checkout-form>
+            </ng-template>
+            <!-- <app-form-group [fieldLabel]="'Order note'" [inputType]="'textarea'" [inputPlaceholder]="'Order Notes'">
+            </app-form-group> -->
+        </div>
+        <div class="col-md-6">
+
+            <app-order-products [shipping]="shipping"></app-order-products>
+            <app-payment [control]="payment_method"></app-payment>
+            <button class="green w-100 mb-5">
+        Continue to Payment
+      </button>
+
+
+
+
+        </div>
+
+    </div>

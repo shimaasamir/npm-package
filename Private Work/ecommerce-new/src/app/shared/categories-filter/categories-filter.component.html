@@ -1,0 +1,32 @@
+<div class="filterContainer">
+
+    <button type="button" class="cardHeaderButton" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample" [ngClass]="isCollapsed?'collapsed':'expanded'">
+    {{title}}
+  </button>
+    <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+        <ul *ngIf="filterType == 'categories'" class="checkboxsListCont">
+            <li class="checkboxsList">
+                <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+                    <ngb-panel *ngFor="let category of categoryList">
+                        <ng-template ngbPanelTitle>
+                            <span>
+                <img class="expandedIcon" src="../../../assets/icons/accExpandedIcon.svg">
+                <img class="collapsedIcon" src="../../../assets/icons/accCollapsedIcon.svg">
+                {{ category.name }}</span>
+                        </ng-template>
+                        <ng-template ngbPanelContent>
+                            <app-sub-category-list *ngIf="category && category.subCategory" [DataSource]="category.subCategory">
+                            </app-sub-category-list>
+                        </ng-template>
+                    </ngb-panel>
+                </ngb-accordion>
+            </li>
+        </ul>
+
+        <div *ngIf="filterType != 'categories'" class="checkboxsListCont">
+          
+            <app-multi-select  [dataSource]="brandList" [name]="'name'" [id]="'id'">
+            </app-multi-select>
+        </div>
+    </div>
+</div>

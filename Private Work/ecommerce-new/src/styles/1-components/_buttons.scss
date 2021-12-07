@@ -1,0 +1,15 @@
+@import '../0-base/base';
+button {
+    @extend .font-16;
+    line-height: 4rem;
+    text-align: center;
+    border-radius: 15px;
+    &.red {
+        background: $base_red;
+        color: #fff;
+    }
+    &.green {
+        background: $sec_green;
+        color: #fff;
+    }
+}

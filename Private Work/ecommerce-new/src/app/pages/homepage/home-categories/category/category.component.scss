@@ -1,0 +1,6 @@
+@import "../../../../../styles/0-base/base";
+.category {
+    @extend .font-14;
+    font-weight: $font_weight_normal;
+    color: #444;
+}

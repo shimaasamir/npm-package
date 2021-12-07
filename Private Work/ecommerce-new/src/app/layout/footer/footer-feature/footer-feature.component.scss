@@ -1,0 +1,20 @@
+@import "../../../../styles/0-base/base";
+.odiggoCard {
+    img {
+        height: 15px;
+        width: auto;
+        margin: 10px;
+        margin-right: 25px;
+    }
+    h4 {
+        @extend .font-18;
+        color: #000;
+        margin-bottom: 10px;
+        font-weight: $font_weight_medium;
+    }
+    p {
+        @extend .font-14;
+        font-weight: $font_weight_normal;
+        color: #666;
+    }
+}

@@ -1,0 +1,112 @@
+<h2 class="heading-2 mb-3">
+    Personal Details
+</h2>
+<form>
+    <!-- <app-error-details *ngIf="error && error.errors" [errors]="error?.errors"></app-error-details> -->
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <app-form-group [inputType]="'text'" [inputPlaceholder]="'Username'">
+            </app-form-group>
+            <app-validation [className]="'mt-40'" [fieldName]="'title'"></app-validation>
+
+        </div>
+        <div class="col-md-6">
+            <app-form-group [inputType]="'tel'" [inputPlaceholder]="'Mobile'">
+            </app-form-group>
+            <app-validation [className]="'mb-40'" [fieldName]="'phone'"></app-validation>
+
+        </div>
+    </div>
+
+    <app-form-group [inputType]="'text'" [inputPlaceholder]="'Email '">
+    </app-form-group>
+    <app-validation [className]="'mb-40'" [fieldName]="'city'"></app-validation>
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <app-form-group [dataSource]="sateList" (changeValue)="onStateChange($event)" [inputType]="'dropdown'">
+            </app-form-group>
+            <app-validation [className]="'mb-40'" [fieldName]="'state'"></app-validation>
+
+        </div>
+        <div class="col-md-6">
+            <app-form-group [dataSource]="cityList" [inputType]="'dropdown'">
+            </app-form-group>
+            <app-validation [className]="'mb-40'" [fieldName]="'city'"></app-validation>
+
+        </div>
+    </div>
+
+
+
+    <app-form-group [inputType]="'text'" [inputPlaceholder]="'Address '">
+    </app-form-group>
+    <app-validation [className]="'mb-40'" [fieldName]="'city'"></app-validation>
+    <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="customRadio3" name="payment">
+        <label class="custom-control-label d-flex align-items-center" for="customRadio3">
+      <div class="d-flex flex-column">
+        Create an account
+        <span>Create an account by entering the information below. If you are a returning customer please login at the
+          top of the page.</span>
+      </div>
+    </label>
+    </div>
+    <!-- <section>
+        <app-form-group [fieldLabel]="'Contact Name'" [inputPlaceholder]="'Contact Name'" [inputType]="'text'">
+        </app-form-group>
+        <app-validation [className]="'mt-40'" [fieldName]="'title'"></app-validation>
+
+        <app-form-group [dataSource]="sateList" (changeValue)="onStateChange($event)" [fieldLabel]="'State Address'" [inputType]="'dropdown'">
+        </app-form-group>
+        <app-validation [className]="'mb-40'" [fieldName]="'state'"></app-validation>
+
+
+        <app-form-group [dataSource]="cityList" [fieldLabel]="'City Address'" [inputType]="'dropdown'">
+        </app-form-group>
+        <app-validation [className]="'mb-40'" [fieldName]="'city'"></app-validation>
+
+
+        <app-form-group [fieldLabel]="'Address'" [inputType]="'text'">
+        </app-form-group>
+        <app-validation [className]="'mb-40'" [fieldName]="'city'"></app-validation>
+    </section> -->
+
+    <!-- <section>
+        <app-form-group [fieldLabel]="'Phone Number'" [inputType]="'tel'">
+        </app-form-group>
+        <app-validation [className]="'mb-40'" [fieldName]="'phone'"></app-validation>
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+    </section> -->
+
+    <app-form-group [inputType]="'email'" [inputPlaceholder]="'Email'">
+    </app-form-group>
+    <app-validation [className]="'mb-40'" [fieldName]="'email'"></app-validation>
+    <div class="row">
+        <div class="col-md-6">
+
+            <app-form-group [inputType]="'password'" [inputPlaceholder]="'Password'">
+            </app-form-group>
+            <app-validation [className]="'mt-40'" [fieldName]="'password'"></app-validation>
+
+        </div>
+        <div class="col-md-6">
+            <app-form-group [inputType]="'password'" [inputPlaceholder]="'Confirm Password'">
+            </app-form-group>
+            <app-validation [className]="'mb-40'" [fieldName]="'Confirm Password'"></app-validation>
+
+        </div>
+    </div>
+
+    <app-form-group [inputType]="'textarea'" [inputPlaceholder]="'Note '">
+    </app-form-group>
+    <!-- <app-password-form-material></app-password-form-material> -->
+
+    <br>
+
+</form>

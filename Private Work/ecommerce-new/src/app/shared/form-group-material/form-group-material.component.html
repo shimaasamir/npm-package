@@ -1,0 +1,18 @@
+<mat-form-field [color]="'Accent'" appearance="outline" *ngIf="inputType != 'dropdown'">
+    <mat-label>{{fieldLabel}}</mat-label>
+    <input matInput [formControl]="control" *ngIf="inputType != 'textarea' && inputType != 'dropdown'"
+        type="{{inputType}}" placeholder="{{inputPlaceholder}}">
+    <textarea matInput [formControl]="control" *ngIf="inputType == 'textarea'" placeholder="{{inputPlaceholder}}">
+    </textarea>
+
+    <mat-hint>{{ hint }}</mat-hint>
+</mat-form-field>
+
+
+<mat-form-field [color]="'Accent'" appearance="outline" *ngIf="inputType == 'dropdown' && dataSource">
+    <mat-label>{{fieldLabel}}</mat-label>
+    <mat-select (selectionChange)="onChangeValue($event)">
+        <mat-option [value]="data.id" *ngFor="let data of dataSource">{{ data.name }}</mat-option>
+    </mat-select>
+    <mat-hint>{{ hint }}</mat-hint>
+</mat-form-field>

@@ -1,0 +1,12 @@
+<h2 class="heading-2 mb-3">
+    Saved Addresses
+</h2>
+<ul>
+    <app-address-item [StateDataSource]="stateList" [Address]="address" *ngFor="let address of addressList">
+    </app-address-item>
+
+</ul>
+<button (click)="addNewAddress()" class="addAddressButton">
+  <svg>
+    <use xlink:href="#addIcon"></use>
+  </svg>add new address</button>

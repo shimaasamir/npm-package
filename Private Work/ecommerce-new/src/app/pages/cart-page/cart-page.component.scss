@@ -1,0 +1,95 @@
+@import "../../../styles/0-base/base";
+.font-28 {
+    font-weight: $font_weight_bold;
+}
+
+.cartDetails {
+    // display: flex;
+    // align-items: flex-start;
+    margin-bottom: 65px;
+    .cartItems {
+        flex-grow: 1;
+        margin-right: 10px;
+    }
+    .warning {
+        border: 1px solid #f4ea73;
+        background-color: #f8f1a2;
+        color: #464646;
+        padding: 19px;
+        line-height: 2;
+        flex-grow: 1;
+    }
+}
+
+.cartTotal {
+    h2 {
+        @extend .font-16;
+        // text-align: center;
+        color: #000;
+        margin-bottom: 20px;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            line-height: 45px;
+            @extend .font-14;
+            border-top: 1px solid #eeeeee;
+            color: #505050;
+            span {
+                @extend .font-16;
+                margin-left: .5rem;
+            }
+            &:last-child {
+                @extend .font-22;
+                text-align: center;
+                // color: #000;
+                padding: 20px 0 0;
+                margin-bottom: 50px;
+                span {
+                    @extend .font-22;
+                    margin-left: .5rem;
+                }
+            }
+        }
+    }
+    .buttonSec {
+        @extend .font-18;
+        @include button( #fff, $sec_green, $sec_green, 15px, 4rem, $font_weight_normal);
+        margin-bottom: 10px;
+    }
+    .buttonPrimary {
+        @extend .font-18;
+        @include button( $sec_green, #fff, $sec_green, 15px, 4rem, $font_weight_bold);
+    }
+}
+
+// .checkout {
+//     background: $sec_green;
+//     padding: 20px 0;
+//     .totalCart {
+//         display: flex;
+//         flex-direction: column;
+//         color: #fff;
+//         @extend .font-18;
+//         span {
+//             font-size: 9px;
+//             font-weight: $font_weight_medium;
+//             line-height: 1.4;
+//         }
+//     }
+//     button {
+//         @extend .font-18;
+//         color: #fff;
+//         display: flex;
+//         align-items: center;
+//         img {
+//             margin-left: 10px;
+//         }
+//     }
+// }

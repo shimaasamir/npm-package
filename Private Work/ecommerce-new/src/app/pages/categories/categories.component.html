@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <ul class="breadcrumb">
+                <li>
+                    <a href="#" routerLink="/">
+            Home
+          </a>
+                </li>
+                <li>
+                    <a routerLink="./">
+            Categories
+          </a>
+                </li>
+                <li>
+                    {{ category.name}}
+                </li>
+            </ul>
+            <img src="../../../assets/images/CategoryPlaceholder.png" class="img-fluid " [ngClass]="{'categoryCover': !hasFilter}" alt="" />
+        </div>
+        <div class="col-md-12" *ngIf="hasFilter">
+            <app-home-search></app-home-search>
+        </div>
+        <div class="col-md-3">
+            <form [formGroup]="form">
+                <app-categories-filter [title]="'Browes Categories'"></app-categories-filter>
+                <app-categories-filter [filterType]="'Brand'" [title]="'Brand'"></app-categories-filter>
+                <app-categories-filter [filterType]="'Region'" [title]="'Region'"></app-categories-filter>
+                <app-price-list (filterProduct)="filterProducts()" [form]="form" [title]="'Price'"></app-price-list>
+            </form>
+
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <!-- <div class="col-md-12 ">
+                    <div class="d-flex justify-content-end diplayIcons">
+                        <svg class="active">
+              <use xlink:href="#gridIcon"></use>
+            </svg>
+                        <svg>
+              <use xlink:href="#listIcon"></use>
+            </svg>
+                    </div>
+                </div> -->
+                <ng-template [ngIf]="productList && productList.length > 0" [ngIfElse]="noProduct">
+                    <div class="col-md-4 mb-3" *ngFor="let product of productList | slice: (page-1) * pageSize : page * pageSize">
+                        <app-product-card [product]="product" [image]="'featuredImage'"></app-product-card>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="d-flex justify-content-end pagination">
+                            <app-pagination [(page)]="page" [CollectionSize]="productList ? productList.length : 0">
+                            </app-pagination>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template #noProduct>
+                    <div class="col-12 not-found">
+                        No product available for this category
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

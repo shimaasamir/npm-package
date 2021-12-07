@@ -1,0 +1,31 @@
+@import "../../../styles/0-base/base";
+.odiggoCard {
+    &.profileMenu {
+        padding: 1rem;
+        li {
+            margin-bottom: .5rem;
+            a {
+                padding: 10px 8px;
+                border-radius: 15px;
+                display: flex;
+                align-items: center;
+                @extend .font-18;
+                font-weight: $font_weight_medium;
+                color: #2F4858;
+                img {
+                    margin-right: 1rem;
+                }
+                &.active {
+                    background: #F5F9FF;
+                }
+                &:hover {
+                    text-decoration: none;
+                    background: #F5F9FF;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

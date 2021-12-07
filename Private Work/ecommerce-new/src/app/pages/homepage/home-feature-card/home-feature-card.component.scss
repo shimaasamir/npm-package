@@ -1,0 +1,57 @@
+@import '../../../../styles/0-base/base';
+.featureCard {
+    padding: 20px 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: #F1FFEB;
+    img {
+        margin-bottom: 20px;
+        height: 32px;
+    }
+    h4 {
+        @extend .font-16;
+        font-size: 18px;
+        font-weight: $font_weight_bold;
+        margin-bottom: 20px;
+        color: #40A435;
+    }
+    p {
+        @extend .font-16;
+        font-weight: $font_weight_medium;
+        color: #171717;
+        text-align: center;
+    }
+    &.yellow {
+        background: #FFF3DE;
+        h4 {
+            color: #D79738;
+        }
+    }
+    &.black {
+        background: #EFEFEF;
+        h4 {
+            color: #363636;
+        }
+    }
+    &.blue {
+        background: #D3EDFF;
+        h4 {
+            color: #255E86;
+        }
+    }
+    &.red {
+        background: #FFE8EB;
+        h4 {
+            color: #D53F52;
+        }
+    }
+    &.purple {
+        background: #F8F0FF;
+        h4 {
+            color: #8E00F7;
+        }
+    }
+}

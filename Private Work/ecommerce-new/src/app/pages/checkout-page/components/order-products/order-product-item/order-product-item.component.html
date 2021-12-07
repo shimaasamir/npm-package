@@ -1,0 +1,27 @@
+<li>
+    <div class="odiggoCard">
+        <img [src]="product.featuredImage" class="img-fluid" />
+        <div class="productDetails d-flex  justify-content-between">
+            <h3>
+                {{product.name}}
+            </h3>
+            <div class="priceRating d-flex justify-content-between ">
+                <div class="price">
+                    EGP {{ (product.offer_price > 0) ? (product.offer_price | number) : (product.sale_price | number)}}
+
+                    <!-- <span [ngStyle]="{'text-decoration': (product.offer_price > 0) ? 'line-through' : 'none'}">
+            EGP {{ product.sale_price | number}}
+          </span> -->
+                </div>
+                <!-- <h6 class="rating d-flex align-items-center ml-auto">
+                {{rating}} <img src="../../../../../../assets/icons/star.svg"> <span>({{ratingCount}})</span>
+            </h6> -->
+            </div>
+            <svg>
+        <use xlink:href="#trash"></use>
+      </svg>
+        </div>
+    </div>
+
+
+</li>

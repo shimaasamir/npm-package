@@ -1,0 +1,14 @@
+@import '../../../../../styles/0-base/base';
+.login {
+    button {
+        @extend .font-18;
+        color: $info_text_color;
+        font-weight: $font_weight_bold;
+        border: 1px solid $info_text_color;
+        line-height: 44px;
+        padding: 0 1.25rem;
+        // text-transform: uppercase;
+        border-radius: 1rem;
+        background: #fff;
+    }
+}

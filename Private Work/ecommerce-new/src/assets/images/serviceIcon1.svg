@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="36" viewBox="0 0 65 36">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3556" data-name="Rectangle 3556" width="65" height="36" rx="5" transform="translate(0.284 0.566)" fill="#e11711"/>
+    </clipPath>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 1120 630">
+      <image width="1120" height="630" xlink:href="serviceIcon1-image.png"/>
+    </pattern>
+  </defs>
+  <g id="Mask_Group_175" data-name="Mask Group 175" transform="translate(-0.284 -0.566)" clip-path="url(#clip-path)">
+    <rect id="vw-motoroel-betriebsfluessigkeit" width="65" height="36" transform="translate(0.284 0.566)" fill="url(#pattern)"/>
+  </g>
+</svg>

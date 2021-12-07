@@ -1,0 +1,152 @@
+<div class="container mb-6">
+    <div class="row">
+        <div class="col-md-12">
+            <app-home-search class="search w-100"></app-home-search>
+        </div>
+        <div class="col-md-2">
+            <app-home-categories [category]="homeObject.top_categories"></app-home-categories>
+        </div>
+        <div class="col-md-7">
+            <img class="img-fluid" src="../../../assets/images/offer1.png">
+        </div>
+        <div class="col-md-3">
+            <div class="d-flex flex-column">
+                <img class="mb-2 img-fluid" src="../../../assets/images/offer1.png">
+                <img class="img-fluid" src="../../../assets/images/offer1.png">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="feature mb-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <app-home-feature-card [title]="'27/4 support'" [iconName]="'supp1'" [cardClass]="'green'">
+                </app-home-feature-card>
+            </div>
+            <div class="col-md-4">
+                <app-home-feature-card [title]="'Multiple Payment Options'" [iconName]="'supp2'" [cardClass]="'yellow'">
+                </app-home-feature-card>
+            </div>
+            <div class="col-md-4">
+                <app-home-feature-card [title]="'International Marketplace'" [iconName]="'supp3'" [cardClass]="'black'">
+                </app-home-feature-card>
+            </div>
+            <div class="col-md-4">
+                <app-home-feature-card [title]="'Track Your Order'" [iconName]="'supp4'" [cardClass]="'blue'">
+                </app-home-feature-card>
+            </div>
+            <div class="col-md-4">
+                <app-home-feature-card [title]="'Special Parts Requests'" [iconName]="'supp5'" [cardClass]="'red'">
+                </app-home-feature-card>
+            </div>
+            <div class="col-md-4">
+                <app-home-feature-card [title]="'Our Value'" [iconName]="'supp6'" [cardClass]="'purple'">
+                </app-home-feature-card>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="popCategories mb-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <h1 class="heading-1 title">Popular Categories
+                    <a href="">
+            View all
+          </a>
+                </h1>
+            </div>
+            <div class="col-md-3">
+                <img class="img-fluid" src="../../../assets/images/TiresImage.jpg" />
+            </div>
+            <div class="col-md-3">
+                <img class="img-fluid" src="../../../assets/images/BrakeImage.jpg" />
+            </div>
+            <div class="col-md-3">
+                <img class="img-fluid" src="../../../assets/images/OilImage.jpg" />
+            </div>
+            <div class="col-md-3">
+                <img class="img-fluid" src="../../../assets/images/LightsImage.jpg" />
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <app-home-services></app-home-services> -->
+<div class="container products mb-6">
+    <app-home-products [product]="homeObject.most_selling"></app-home-products>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class=" marktingMessage mb-6">
+                <div class="details">
+                    <h4 class="small">Grow your</h4>
+                    <h2 class="title">Business</h2>
+                    <h4 class="small">With Odiggo</h4>
+                </div>
+                <button type="button">
+          Business Plans
+        </button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class=" marktingMessage green mb-6">
+                <div class="details">
+                    <h4 class="small">Increase your</h4>
+                    <h2 class="title">Sales</h2>
+                    <h4 class="small">With Odiggo</h4>
+                </div>
+                <button type="button">
+          Sell On Odiggo
+        </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="darkGraySec mb-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="d-flex flex-column">
+                    <img src="../../../assets/images/offer1@2x.png" class="img-fluid mb-3" />
+                    <img src="../../../assets/images/offer1@2x.png" class="img-fluid " />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="../../../assets/images/offer1@2x.png" class="img-fluid mb-3" />
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex flex-column">
+                    <img src="../../../assets/images/offer1@2x.png" class="img-fluid mb-3" />
+                    <img src="../../../assets/images/offer1@2x.png" class="img-fluid " />
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<div class="container products mb-6">
+
+    <app-home-products [product]="homeObject.most_selling"></app-home-products>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class=" marktingMessage perple mb-6">
+                <div class="details">
+                    <h4 class="small">Be a part of</h4>
+                    <h2 class="title">building</h2>
+                    <h4 class="small">a 100 years company</h4>
+                </div>
+                <button type="button">
+          Join Odiggo
+        </button>
+            </div>
+        </div>
+    </div>
+</div>

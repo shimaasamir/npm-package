@@ -1,0 +1,9 @@
+<ul *ngFor="let subCategory of subCategoryList">
+    <li class="d-flex">
+        <a class="pointer" routerLink="./" [queryParams]="{ category: getEcraptedId(subCategory.id) }"
+            routerLinkActive="active">{{
+            subCategory.name }}</a>
+        <span class="ml-auto">({{
+            subCategory.products_count}})</span>
+    </li>
+</ul>

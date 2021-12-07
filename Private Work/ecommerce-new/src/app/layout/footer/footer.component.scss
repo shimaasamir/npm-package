@@ -1,0 +1,97 @@
+@import "../../../styles/0-base/base";
+footer {
+    // margin-top: 45px;
+    .darkGraySec {
+        padding: 1.5rem;
+    }
+    .mainFooter {
+        background-color: #191919;
+        padding: 4rem 0 1.5rem 0;
+        ul {
+            li {
+                @extend .font-14;
+                color: #fff;
+                text-transform: uppercase;
+                margin-bottom: 40px;
+                font-weight: $font_weight_medium;
+                margin-bottom: 20px;
+                &:first-child {
+                    @extend .font-18;
+                    color: #fff;
+                    margin-bottom: 22px;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                a {
+                    // @extend .font-18;
+                    color: inherit;
+                    font-weight: $font_weight_normal;
+                    text-transform: capitalize;
+                }
+            }
+            &:nth-child(4) {
+                li {
+                    display: flex;
+                    align-items: center;
+                    svg {
+                        width: 15px;
+                        height: 15px;
+                        margin-right: 25px;
+                        &.fillWhite {
+                            fill: #fff;
+                        }
+                    }
+                    &:last-child {
+                        align-items: flex-start;
+                        flex-direction: column;
+                        ul {
+                            display: flex;
+                            justify-content: flex-start;
+                            // margin-left: 10px;
+                            flex-grow: 1;
+                            gap: 5px;
+                            margin-top: .75rem;
+                            li {
+                                display: flex;
+                                background-color: #707070;
+                                border-radius: 50%;
+                                width: 27px;
+                                height: 27px;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 0;
+                                a {
+                                    svg {
+                                        width: 1rem;
+                                        height: 1rem;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                >li:first-child {
+                    text-transform: capitalize;
+                }
+                ul {
+                    li {
+                        margin-bottom: 0;
+                        img {
+                            margin-right: 5px;
+                        }
+                        &:first-child {
+                            font-weight: $font_weight_normal;
+                        }
+                    }
+                }
+            }
+        }
+        .font-12 {
+            color: #fff;
+        }
+    }
+}

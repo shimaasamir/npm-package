@@ -1,0 +1,33 @@
+@import '../0-base/base';
+@import 'filter';
+@import 'forms';
+@import 'buttons';
+.odiggoCard {
+    background: #fff;
+    border-radius: 15px;
+    padding: 24px;
+}
+
+.breadcrumb {
+    display: flex;
+    background: transparent;
+    padding: 0;
+    margin-bottom: 1rem;
+    li {
+        @extend .font-16;
+        font-weight: $font_weight_normal;
+        color: #000;
+        margin-right: 5px;
+        a {
+            color: #bbbbbb;
+        }
+        &::after {
+            content: "/";
+            color: #bbbbbb;
+            margin-left: 5px;
+        }
+        &:last-child::after {
+            display: none;
+        }
+    }
+}

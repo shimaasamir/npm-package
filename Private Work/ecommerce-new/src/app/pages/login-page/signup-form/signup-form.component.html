@@ -1,0 +1,39 @@
+<form [formGroup]="form">
+    <h1 class="font-18">
+        Sign up to Odiggo
+    </h1>
+    <p class="font-12 mb-3">
+        Stay Logged in With Your Account to get a Better experience
+    </p>
+
+    <app-error-details *ngIf="error && error.errors" [errors]="error?.errors"></app-error-details>
+
+    <app-form-group [fieldLabel]="'Username'" [control]="name" [className]="'loginInput'" [inputType]="'text'" [inputPlaceholder]="'User Name'">
+    </app-form-group>
+    <app-validation [control]="name" [fieldName]="'name'"></app-validation>
+    <app-form-group [fieldLabel]="'Email'" [control]="email" [className]="'loginInput'" [inputType]="'email'" [inputPlaceholder]="'Enter your Email'">
+    </app-form-group>
+    <app-validation [control]="email" [fieldName]="'mail'"></app-validation>
+
+    <app-form-group [fieldLabel]="'Password'" [control]="password" [className]="'loginInput'" [inputType]="'password'" [inputPlaceholder]="'6+ Character'">
+    </app-form-group>
+    <app-validation [control]="password" [fieldName]="'password'"></app-validation>
+
+    <app-form-group [fieldLabel]="'Confirm Password'" [control]="confirm" [className]="'loginInput'" [inputType]="'password'" [inputPlaceholder]="'6+ Character'">
+    </app-form-group>
+    <app-validation [control]="confirm" [fieldName]="'confirm password'"></app-validation>
+
+    <app-form-group [fieldLabel]="'Phone number'" [control]="phoneNumber" [className]="'loginInput'" [inputType]="'text'" [inputPlaceholder]="'(01XXXXXXXXX phone contains 11 numbers)'">
+    </app-form-group>
+    <app-validation [control]="phoneNumber" [fieldName]="'phone'"></app-validation>
+
+    <br>
+    <button type="button" (click)="onSubmit()">
+        <ovel-loader *ngIf="showLoader"></ovel-loader>
+        Create an account
+    </button>
+
+
+    <app-social-login [alterText]="'Already Member ?'" [navigationPath]="'/login'" [buttonText]="'Login'">
+    </app-social-login>
+</form>

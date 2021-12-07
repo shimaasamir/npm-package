@@ -1,0 +1,57 @@
+<!-- topBar -->
+<div class="topBar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex">
+                    <p>
+                        Due to corona virus (COVID-19), deliveries could take longer than usual. Contact our customer support for updates
+                    </p>
+                    <div class="lang ml-auto">
+                        العربية
+                    </div>
+                    <div class="shopping ml-auto d-flex">
+                        Shopping in
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex">
+                    <a href="" class="d-block">
+                        <img src="../../../assets/images/logo.svg" alt="logo" />
+                    </a>
+                    <div class="searchForm">
+                        <ng-autocomplete [data]="data" historyIdentifier="data" placeholder="What you are looking for?" [itemTemplate]="itemTemplate" [searchKeyword]="keyword" (inputChanged)='search($event)' [customFilter]="pleaseDontFilter" (inputFocused)='onFocused()' [notFoundTemplate]="notFoundTemplate">
+                        </ng-autocomplete>
+                        <ng-template #itemTemplate let-product>
+                            <div (click)="redirectToProductDetails(product.objectID)">
+                                <img src="{{product.image}}" alt="{{ product.name }}">
+                                <h5 class="productCard" [innerHTML]="product.name"></h5>
+                                <p class="price"> {{product.sale_price | number }} EGP</p>
+                            </div>
+                        </ng-template>
+                        <ng-template #notFoundTemplate let-notFound>
+                            <div [innerHTML]="notFound"></div>
+                        </ng-template>
+                        <button type="button">
+              <svg>
+                <use xlink:href="#search" />
+              </svg>
+              <!-- <i class="fas fa-search"></i> -->
+            </button>
+                    </div>
+                    <!-- <app-search></app-search> -->
+                    <app-cart></app-cart>
+                    <app-login></app-login>
+                </div>
+            </div>
+        </div>
+        <!-- <app-header-menu></app-header-menu> -->
+    </div>
+</header>

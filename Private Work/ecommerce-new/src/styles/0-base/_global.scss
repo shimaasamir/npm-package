@@ -1,0 +1,48 @@
+/* Colors: */
+
+$base_red: #E41022;
+$base_white: #FFFFFF;
+$sec_green: #40A435;
+$sec_blue: #015F8A;
+$text_pink: #E72B4E;
+$text_gray: #8F8E90;
+$text_dark_gray: #363636;
+$text_light_gray: #DCDCDC;
+$text_orange: #E19411;
+$text_green: #008A3E;
+body {
+    background: #F5F5F5;
+}
+
+.mb-6 {
+    margin-bottom: 6rem;
+}
+
+.green {
+    color: $sec_green;
+}
+
+.darkGraySec {
+    padding: 3.5rem 0;
+    background: #EBEBEB;
+}
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+// $theme-colors: () !default;
+// $theme-colors: map-merge(( "blue": blue, "secondary": green, "success": yellow, // "info":       $info,
+// // "warning":    $warning,
+// // "danger":     $danger,
+// // "light":      $light,
+// // "dark":       $dark
+// ), $theme-colors);
+// @each $color,
+// $value in $theme-colors {
+//     .btn-#{$color} {
+//         color: $value;
+//     }
+// }

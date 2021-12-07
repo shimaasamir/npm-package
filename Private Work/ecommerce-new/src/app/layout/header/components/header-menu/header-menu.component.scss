@@ -1,0 +1,54 @@
+@import '../../../../../styles/0-base/base';
+.headerMenu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+    li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        a {
+            @extend .font-14;
+            color: #0F0F0F;
+            font-weight: $font_weight_normal;
+            svg {
+                // stroke: $base_red;
+                // stroke-width: 1px;
+                // fill: none;
+                width: 18px;
+                height: 18px;
+                margin: 5px;
+                margin-right: 5px;
+            }
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        ul {
+            position: absolute;
+            z-index: 111;
+            top: 100%;
+            width: 225px;
+            background: #fff;
+            border-bottom-right-radius: 15px;
+            // padding-left: 20px;
+            display: none;
+            li {
+                padding: 10px 0 10px 20px;
+                border-bottom: 1px solid rgba(112, 112, 112, .4);
+                a {
+                    @extend .font-12;
+                    color: #0F0F0F;
+                }
+                &:last-child {
+                    border: none;
+                }
+            }
+        }
+        &:first-child {
+            a {
+                font-weight: $font_weight_medium;
+            }
+        }
+    }
+}

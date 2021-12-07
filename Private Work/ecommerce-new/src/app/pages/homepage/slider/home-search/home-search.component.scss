@@ -1,0 +1,37 @@
+@import '../../../../../styles/0-base/base';
+@import '../../../../../styles/1-components/components';
+.odiggoCard {
+    margin-bottom: 2rem;
+    img {
+        height: 112px;
+        margin-right: 40px;
+    }
+    p {
+        @extend .font-18;
+        font-weight: $font_weight_medium;
+        margin-bottom: 1.5rem;
+        color: #212121;
+    }
+    .searchForm {
+        display: flex;
+        // background: rgba(51, 51, 51, .4);
+        // padding: 5px 5px 5px 36px;
+        // border-radius: 42px;
+        justify-content: space-between;
+        gap: 20px;
+        .field {
+            flex-grow: 1;
+        }
+        button {
+            width: 200px;
+            background-color: $base_red;
+            @extend .font-18;
+            color: #fff;
+            font-weight: $font_weight_bold;
+            text-align: center;
+            border-radius: 15px;
+            margin-left: auto;
+            line-height: 4rem;
+        }
+    }
+}

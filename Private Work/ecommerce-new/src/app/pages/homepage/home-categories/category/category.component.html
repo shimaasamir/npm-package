@@ -1,0 +1,5 @@
+<ng-template [ngIf]="category">
+    <a class="category" routerLink="/categories" [queryParams]="{ category: getEcraptedId(category.id) }">
+    {{ category.name }}
+  </a>
+</ng-template>

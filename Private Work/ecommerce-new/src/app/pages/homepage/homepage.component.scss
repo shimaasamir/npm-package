@@ -1,0 +1,51 @@
+@import '../../../styles/0-base/base';
+.marktingMessage {
+    background: #000;
+    padding: 55px 38px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .details {
+        display: flex;
+        flex-direction: column;
+        .small {
+            @extend .font-18;
+            color: #fff;
+        }
+        .title {
+            font-size: 4rem;
+            color: #007CFF;
+            text-transform: uppercase;
+            font-weight: $font_weight_bold;
+        }
+    }
+    button {
+        @extend .font-18;
+        border-radius: 15px;
+        padding: 20px 30px;
+        background: #007CFF;
+        color: #fff;
+    }
+    &.green {
+        .details {
+            .title {
+                color: #009256
+            }
+        }
+        button {
+            background: #009256;
+        }
+    }
+    &.perple {
+        background: #BCBFFF;
+        .details {
+            .title {
+                color: #464EEF
+            }
+        }
+        button {
+            background: #464EEF;
+        }
+    }
+}

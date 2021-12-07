@@ -1,0 +1,12 @@
+@import "../../../../styles/0-base/base";
+
+button[type="button"] {
+  @extend .font-16;
+  color: #fff;
+  background-color: $base_red;
+  text-align: center;
+  line-height: 44px;
+  width: 100%;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,171 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="font-28 mb-3">
+                Product Details
+            </h1>
+            <ul class="breadcrumb">
+                <li>
+                    <a href="#" routerLink="/">
+            Home
+          </a>
+                </li>
+                <li>
+                    <a routerLink="./">
+            Products
+          </a>
+                </li>
+                <li>
+                    {{ product.name}}
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4 mb-6">
+            <div class="odiggoCard ">
+                <img class="img-fluid" [src]="product.featuredImage" alt="Featured" />
+            </div>
+        </div>
+        <div class="col-md-4 d-flex flex-column mb-6">
+            <div class="productDetails ">
+                <h1 class="productName font-28 pr-5 mb-3 mr-5 ">
+                    {{ product.name}}
+                </h1>
+                <div class="d-flex align-items-center  mb-3">
+                    <img src="../../../../../../assets/images/copy.svg " class="mr-3">
+                    <h3 *ngIf="product.mpn"><b>Mpn:</b> {{ product.mpn }}</h3>
+                </div>
+
+                <div class="priceRating d-flex justify-content-between mt-auto">
+                    <div class="price d-flex font-28" *ngIf="product.offer_price > 0">
+                        {{ product.offer_price | number}}
+                        <span class="ml-2 ">egp</span>
+                    </div>
+                    <div class="price d-flex font-18 sale ml-3">
+                        {{ product.sale_price | number}}
+                        <span class="ml-2 ">egp</span>
+                    </div>
+                    <h6 *ngIf="product && product.average_feedback > 0" class="rating d-flex align-items-center ml-auto ">
+                        {{ product.average_feedback }} <img src="../../../../../../assets/icons/star.svg ">
+                    </h6>
+                </div>
+                <hr>
+                <div class="d-flex prodSpecs ">
+                    <div class="d-flex flex-column  ">
+                        <h3>Availability: <span class="green "> {{ product.stock_quantity }} in stock</span></h3>
+                        <h3>Shipping: Shipping: Shipping to Egypt 2-4 business days </h3>
+
+                        <h3>Categories:
+                            <a *ngFor="let category of product.categories; let i = index" routerLink="/categories" [queryParams]="{ category: getEcraptedId(category.id) }">
+                {{ category.name }}
+                <span *ngIf="(i + 1) != product.categories.length">,</span>
+              </a>
+
+                        </h3>
+                        <h3>Seller: {{ product.seller}} </h3>
+
+                        <!-- <h3 *ngIf="product.mpn"><b>Sku:</b> {{ product.sku }}</h3> -->
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="mt-auto">
+
+                <div class="d-flex ">
+                    <input class="form-control " type="number " [value]="quantity">
+
+                    <button type="button" [disabled]="product.stock_quantity == 0" class="addToCart green flex-grow-1" (click)="addProduct()">
+            <svg>
+              <use xlink:href="#cart "></use>
+            </svg>
+            Proceed to checkout
+          </button>
+                </div>
+
+                <span *ngIf="product.stock_quantity == 0" style="color: red;" class="not-available"> this item is not
+          available in stock </span>
+            </div>
+        </div>
+        <div class="col-md-4 mb-6">
+
+            <ul class="d-flex flex-column features">
+                <li class="d-flex align-items-center">
+                    <img class="mr-3" src="../../../../../../assets/images/exchange.svg ">
+                    <h5 class="d-flex flex-column">
+                        FREE RETURNS
+                        <span>Get free returns on eligible items</span>
+                    </h5>
+                </li>
+                <li class="d-flex align-items-center">
+                    <img class="mr-3" src="../../../../../../assets/images/delivery.svg ">
+                    <h5 class="d-flex flex-column">
+                        TRUSTED SHIPPING
+                        <span>Fast and secured shipping for your products</span>
+                    </h5>
+                </li>
+                <li class="d-flex align-items-center">
+                    <img class="mr-3" src="../../../../../../assets/images/secure.svg ">
+                    <h5 class="d-flex flex-column">
+                        SECURE SHOPPING
+                        <span>Your data is always protected</span>
+                    </h5>
+                </li>
+            </ul>
+            <hr>
+            <h3 class="sku font-18 mb-3" *ngIf="product.mpn">OEM: {{ product.sku }}</h3>
+            <h3 class="sku font-18" *ngIf="product.mpn">Sku: {{ product.sku }}</h3>
+        </div>
+
+        <div class="col-md-12 mb-6">
+            <h1 class="heading-1 title">Related Products</h1>
+            <div class="row  ">
+                <div class="col-md-3" *ngFor="let product of product.related">
+                    <app-product-card [product]="product"></app-product-card>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mb-6">
+            <h1 class="heading-1 title">Customer also viewed</h1>
+            <div class="row  ">
+                <div class="col-md-3" *ngFor="let product of product.related">
+                    <app-product-card [product]="product"></app-product-card>
+                </div>
+            </div>
+        </div>
+        <!-- 
+        <ng-template [ngIf]="product && product.average_feedback > 0">
+            <div class="col-md-12 ">
+                <h2 class="heading-2 mb-3 ">
+                    Reviews
+                </h2>
+            </div>
+            <div class="col-md-8 mb-100 ">
+                <div class="overallReview ">
+                    <div class="odiggoCard ">
+                        <div class="d-flex ">
+                            <circle-progress [percent]="percent" [radius]="100 " [title]="rating" [outerStrokeWidth]="12 " [innerStrokeWidth]="10 " [animation]="true " [animationDuration]="300 ">
+                            </circle-progress>
+                            <div class="d-flex flex-column ml-4 mt-4 w-50 ">
+                                <app-rating-bar *ngFor="let key of ratingGroupsKeys" [ratingGroups]="ratingGroups[key]" [total]="this.product.feedbacks.length">
+                                </app-rating-bar>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </ng-template>
+
+        <div class="col-md-12 ">
+            <h2 class="heading-2 mb-3 ">
+                Customers also viewed
+            </h2>
+            <div class="row">
+                <div class="col-md-3" *ngFor="let product of product.linked_items">
+                    <app-product-card [product]="product"></app-product-card>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<ng-template [ngIf]="product">
+    <div class="productCard" ngClass="{{(product.offer_price> 0) ? 'sale' : ''}}">
+        <!-- <div class="rating">
+      4.5<img src="../../../assets/icons/star.svg" alt="" />
+    </div> -->
+        <img src="{{product[image]}}" class="img-fluid" />
+
+        <h4 (click)="navigate(product.id)" title="{{product.name}}">
+            {{product.name}}
+        </h4>
+        <h4 class="price">
+
+            EGP {{ (product.offer_price > 0) ? (product.offer_price | number) : (product.sale_price | number)}}
+            <!-- [ngStyle]="{'text-decoration': (product.offer_price > 0) ? 'line-through' : 'none'}" -->
+            <span *ngIf="product.offer_price > 0">
+        EGP {{ product.sale_price | number}}
+      </span>
+        </h4>
+
+
+        <button style="cursor: pointer;" type="button" (click)="appendToCart()">
+      <svg>
+        <use xlink:href="#cartButton" />
+      </svg>
+
+    </button>
+    </div>
+</ng-template>

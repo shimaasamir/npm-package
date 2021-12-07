@@ -1,0 +1,21 @@
+@import '../0-base/base';
+ngb-pagination {
+    margin-top: 50px;
+    li.page-item {
+        margin-right: 5px;
+        .page-link {
+            background: #EEEEEE;
+            color: #BBBBBB;
+            border: none;
+            border-radius: 5px;
+            @extend .font-12;
+            font-weight: $font_weight_medium;
+        }
+        &.active {
+            .page-link {
+                background: $base_red;
+                border-color: $base_red;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+<li (click)="updateSelectedAddress()">
+    <div class="odiggoCard">
+
+        <h3 class="d-flex justify-content-between addressCardTitle">
+            {{ address.address_title }}
+            <!-- test -->
+            <span *ngIf="(selectedAddress$ | async)?.id == address.id">
+        selected
+      </span>
+        </h3>
+        <address class="addressDetails">
+      {{ stateName }}
+      <!-- test state -->
+      <br>
+      {{ address.address_line_1}}
+      <!-- address test -->
+      <br>
+      {{ address.phone }}
+
+      <!-- Phone test 038345345934 -->
+    </address>
+    </div>
+</li>

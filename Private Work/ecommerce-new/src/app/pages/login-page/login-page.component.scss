@@ -1,0 +1,40 @@
+@import '../../../styles/0-base/base';
+.accountForm {
+    display: flex;
+    height: 100vh;
+    .loginBg {
+        padding: 30px 0;
+        flex-grow: 1;
+        background: url('./../../../assets/images/Group\ 9121@3x.jpg') center no-repeat;
+        background-size: cover;
+        position: relative;
+        h2 {
+            position: absolute;
+            left: 30px;
+            bottom: 45px;
+            font-family: $font_family;
+            font-size: 76px;
+            line-height: 1.4;
+            font-weight: $font_weight_bold;
+            font-style: italic;
+            color: #fff;
+        }
+    }
+    .loginSignupForm {
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 135px;
+        // flex-grow: 1;
+         ::ng-deep {
+            .loginInput input {
+                height: 44px
+            }
+        }
+         ::ng-deep .font-18,
+         ::ng-deep .font-12 {
+            color: #212121;
+        }
+    }
+}

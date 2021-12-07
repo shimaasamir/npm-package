@@ -1,0 +1,64 @@
+<div class="odiggoCard" [ngClass]="history ? 'mb-3' :''">
+    <div class="d-flex" *ngIf="history">
+        <app-status-steps class="flex-grow-1 mr-5"></app-status-steps>
+        <div class="orderMainData w-25  d-flex ml-auto">
+            <div class="idDate  d-flex flex-column ">
+                <p>
+                    Id : 36467328
+                </p>
+                <p>
+                    Due Date: 12 Dec 2020
+                </p>
+            </div>
+            <div class="status d-flex flex-column ml-auto">
+                Status
+                <span class="green">
+          Delivered
+        </span>
+            </div>
+        </div>
+    </div>
+    <div class="orderMainData d-flex" *ngIf="!history">
+        <div class="idDate d-flex flex-column ">
+            <p>
+                Id : 36467328
+            </p>
+            <p>
+                Due Date: 12 Dec 2020
+            </p>
+        </div>
+        <div class="status ml-auto">
+            Status
+            <span class="green">
+        Delivered
+      </span>
+        </div>
+    </div>
+    <hr>
+    <div class="mb-3" *ngIf="!history">
+        <app-status-steps></app-status-steps>
+    </div>
+    <div class="orderDetails d-flex">
+        <img src="../../../assets/images/productImage.png" />
+        <div class="productDetails d-flex flex-column">
+            <h2>
+                WINDA 155/70 R13 TIRE - WP15 - | CHINA
+            </h2>
+            <div class="mt-auto">
+
+                <h4 class="price">390 <span>egp</span></h4>
+                <div class="rating" *ngIf="!history">
+                    <app-rating></app-rating>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="ml-auto" *ngIf="!history">Reorder</button>
+        <div class="d-flex flex-column ml-auto" *ngIf="history">
+            <div class="mb-2">
+                <app-rating></app-rating>
+            </div>
+            <button type="button" class="ml-auto">Reorder</button>
+
+        </div>
+    </div>
+</div>

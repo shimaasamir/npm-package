@@ -1,0 +1,23 @@
+@import "../../../../../../styles/0-base/base";
+li {
+    margin-bottom: 30px;
+    .odiggoCard {
+        // padding: 23px 46px;
+        cursor: pointer;
+        .addressCardTitle {
+            @extend .font-18;
+            align-items: flex-start;
+            margin-bottom: 3.375rem;
+            span {
+                @extend .font-18;
+                font-weight: $font_weight_bold;
+                color: $base_red;
+            }
+        }
+        .addressDetails {
+            @extend .font-18;
+            font-weight: $font_weight_normal;
+            color: #383838;
+        }
+    }
+}

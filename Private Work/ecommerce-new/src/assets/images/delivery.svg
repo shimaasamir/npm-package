@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+  <g id="Group_12799" data-name="Group 12799" transform="translate(-1379 -629)">
+    <rect id="Rectangle_3999" data-name="Rectangle 3999" width="39" height="39" rx="10" transform="translate(1379 629)" fill="#e72b4e" opacity="0.1"/>
+    <g id="Group_9646" data-name="Group 9646" transform="translate(1378.511 629.07)">
+      <rect id="Rectangle_2638" data-name="Rectangle 2638" width="39" height="39" transform="translate(0.489 -0.07)" fill="none"/>
+      <g id="delivery" transform="translate(6.015 10.525)">
+        <g id="Group_9629" data-name="Group 9629" transform="translate(16.862 11.823)">
+          <g id="Group_9628" data-name="Group 9628">
+            <path id="Path_8314" data-name="Path 8314" d="M325.529,304.4a3.378,3.378,0,1,0,3.378,3.378A3.382,3.382,0,0,0,325.529,304.4Zm0,5.067a1.689,1.689,0,1,1,1.689-1.689A1.691,1.691,0,0,1,325.529,309.47Z" transform="translate(-322.151 -304.403)" fill="#e72b4e"/>
+          </g>
+        </g>
+        <g id="Group_9631" data-name="Group 9631" transform="translate(5.32 11.823)">
+          <g id="Group_9630" data-name="Group 9630">
+            <path id="Path_8315" data-name="Path 8315" d="M105.025,304.4a3.378,3.378,0,1,0,3.378,3.378A3.382,3.382,0,0,0,105.025,304.4Zm0,5.067a1.689,1.689,0,1,1,1.689-1.689A1.691,1.691,0,0,1,105.025,309.47Z" transform="translate(-101.647 -304.403)" fill="#e72b4e"/>
+          </g>
+        </g>
+        <g id="Group_9633" data-name="Group 9633" transform="translate(17.312 1.689)">
+          <g id="Group_9632" data-name="Group 9632">
+            <path id="Path_8316" data-name="Path 8316" d="M335.958,111.255a.845.845,0,0,0-.755-.465h-4.448v1.689h3.927l2.3,4.574,1.509-.759Z" transform="translate(-330.756 -110.79)" fill="#e72b4e"/>
+          </g>
+        </g>
+        <g id="Group_9635" data-name="Group 9635" transform="translate(11.316 14.385)">
+          <g id="Group_9634" data-name="Group 9634">
+            <rect id="Rectangle_2639" data-name="Rectangle 2639" width="6.39" height="1.689" fill="#e72b4e"/>
+          </g>
+        </g>
+        <g id="Group_9637" data-name="Group 9637" transform="translate(2.393 14.385)">
+          <g id="Group_9636" data-name="Group 9636">
+            <path id="Path_8317" data-name="Path 8317" d="M49.487,353.345H46.559a.844.844,0,1,0,0,1.689h2.928a.844.844,0,1,0,0-1.689Z" transform="translate(-45.715 -353.345)" fill="#e72b4e"/>
+          </g>
+        </g>
+        <g id="Group_9639" data-name="Group 9639" transform="translate(2.393 0)">
+          <g id="Group_9638" data-name="Group 9638">
+            <path id="Path_8318" data-name="Path 8318" d="M69.944,87.743,68.283,85.6a.843.843,0,0,0-.667-.327H61.479V79.365a.844.844,0,0,0-.844-.844H46.559a.844.844,0,1,0,0,1.689H59.79v5.912a.844.844,0,0,0,.844.844H67.2l1.23,1.584v4.355H66.1a.844.844,0,0,0,0,1.689h3.181a.845.845,0,0,0,.845-.844V88.261A.846.846,0,0,0,69.944,87.743Z" transform="translate(-45.715 -78.521)" fill="#e72b4e"/>
+          </g>
+        </g>
+        <g id="Group_9641" data-name="Group 9641" transform="translate(1.379 10.106)">
+          <g id="Group_9640" data-name="Group 9640">
+            <path id="Path_8319" data-name="Path 8319" d="M31.082,271.6H27.2a.844.844,0,1,0,0,1.689h3.885a.844.844,0,0,0,0-1.689Z" transform="translate(-26.353 -271.597)" fill="#e72b4e"/>
+          </g>
+        </g>
+        <g id="Group_9643" data-name="Group 9643" transform="translate(0 6.784)">
+          <g id="Group_9642" data-name="Group 9642">
+            <path id="Path_8320" data-name="Path 8320" d="M8.051,208.134H.844a.845.845,0,0,0,0,1.689H8.051a.845.845,0,0,0,0-1.689Z" transform="translate(0 -208.134)" fill="#e72b4e"/>
+          </g>
+        </g>
+        <g id="Group_9645" data-name="Group 9645" transform="translate(1.379 3.462)">
+          <g id="Group_9644" data-name="Group 9644">
+            <path id="Path_8321" data-name="Path 8321" d="M34.4,144.672H27.2a.844.844,0,1,0,0,1.689H34.4a.844.844,0,1,0,0-1.689Z" transform="translate(-26.353 -144.672)" fill="#e72b4e"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
